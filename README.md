@@ -15,5 +15,5 @@
 > * 📱 Mobile-friendly and responsive layout
 > * ⚡ Fast loading, zero JavaScript frameworks
 >
-> 🔗 [Live Preview on GitHub Pages](https://debeatzgh1.github.io/Modern-homepage-styling-with-TailwindCSS-/)
+> 🔗 [Live Preview on GitHub Pages](https://digimartgh.blogspot.com/p/sign-in-for-more_19.html)
 

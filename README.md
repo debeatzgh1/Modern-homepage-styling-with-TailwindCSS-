@@ -1,4 +1,247 @@
 
+
+
+<!-- Floating Form Launcher and Modal -->
+
+<style>
+
+  /* Floating Launcher Button */
+
+  #form-launcher {
+
+    position: fixed;
+
+    right: 10px;
+
+    top: 10%;
+
+    transform: translateY(-50%);
+
+    z-index: 9999;
+
+    background: #24292e;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 50%;
+
+    width: 40px;
+
+    height: 40px;
+
+    box-shadow: 0 4px 16px rgba(36,41,46,0.16);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 28px;
+
+    transition: background 0.2s, box-shadow 0.2s;
+
+  }
+
+  #form-launcher:hover {
+
+    background: #0366d6;
+
+    box-shadow: 0 8px 32px rgba(36,41,46,0.24);
+
+  }
+
+  /* Modal Overlay */
+
+  #form-modal-overlay {
+
+    display: none;
+
+    position: fixed;
+
+    z-index: 10000;
+
+    left: 0;
+
+    top: 0;
+
+    width: 80vw;
+
+    height: 80vh;
+
+    background: rgba(20, 20, 20, 0.68);
+
+    align-items: center;
+
+    justify-content: center;
+
+  }
+
+  /* Modal Content */
+
+  #form-modal-content {
+
+    background: #fff;
+
+    border-radius: 12px;
+
+    max-width: 78vw;
+
+    width: 560px;
+
+    max-height: 90vh;
+
+    box-shadow: 0 8px 40px rgba(0,0,0,0.22);
+
+    padding: 0;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    position: relative;
+
+    animation: modalShow 0.3s;
+
+  }
+
+  @keyframes modalShow {
+
+    from { transform: scale(0.9); opacity: 0; }
+
+    to   { transform: scale(1); opacity: 1; }
+
+  }
+
+  #form-modal-close {
+
+    position: absolute;
+
+    top: 6px;
+
+    right: 16px;
+
+    background: none;
+
+    border: none;
+
+    color: #222;
+
+    font-size: 2rem;
+
+    cursor: pointer;
+
+    z-index: 10001;
+
+    line-height: 1;
+
+  }
+
+  /* Responsive iframe */
+
+  #form-modal-content iframe {
+
+    width: 100%;
+
+    min-height: 720px;
+
+    border: none;
+
+  }
+
+  @media(max-width:700px){
+
+    #form-modal-content { width: 98vw; border-radius: 4px; }
+
+    #form-modal-content iframe { min-height: 90vh; }
+
+  }
+
+</style>
+
+<!-- Floating Launcher Button -->
+
+<button id="form-launcher" title="Request Design Service">
+
+  <svg width="32" height="32" fill="none" viewbox="0 0 24 24"><rect width="24" height="24" rx="12" fill="#24292e"/><path d="M8 12h8M12 8v8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></path></rect></svg>
+
+</button>
+
+<!-- Modal Overlay and Content -->
+
+<div id="form-modal-overlay">
+
+  <div id="form-modal-content">
+
+    <button id="form-modal-close" title="Close">&times;</button>
+
+    <iframe src="https://debeatzgh1.github.io/me-/" allowfullscreen></iframe>
+
+  </div>
+
+</div>
+
+<script>
+
+  // Floating Launcher Modal Logic
+
+  var launcher = document.getElementById('form-launcher');
+
+  var overlay  = document.getElementById('form-modal-overlay');
+
+  var closeBtn = document.getElementById('form-modal-close');
+
+  launcher.onclick = function() {
+
+    overlay.style.display = 'flex';
+
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+
+  };
+
+  closeBtn.onclick = function() {
+
+    overlay.style.display = 'none';
+
+    document.body.style.overflow = '';
+
+  };
+
+  // Close modal when clicking outside content
+
+  overlay.onclick = function(e) {
+
+    if (e.target === overlay) {
+
+      overlay.style.display = 'none';
+
+      document.body.style.overflow = '';
+
+    }
+
+  };
+
+  // ESC key closes modal
+
+  document.addEventListener('keydown', function(e){
+
+    if(e.key === 'Escape'){
+
+      overlay.style.display = 'none';
+
+      document.body.style.overflow = '';
+
+    }
+
+  });
+
+</script>
 > This project showcases a modern homepage layout built entirely with **Tailwind CSS**. It features a responsive design, sticky navigation, dark mode support, a floating home button, and smooth animations – all optimized for blogs, digital portfolios, and landing pages.
 
 <p align="center">
@@ -26,14 +269,14 @@
 
 
 
-# 🚀 DeBeatzGH – AI Tools & Side Hustle Hub  
+# 🚀 AI Tools & Side Hustle Hub  
 
 ![DeBeatzGH Thumbnail](https://debeatzgh.wordpress.com/wp-content/uploads/2025/08/designamodernminimalisticdesignfeaturinganai-themedicon28likeabraincircuitorrobot29overlaidwithdebeatzghoraitoolshustles6089986211026037047.jpg)  
 
 ## 🌟 About  
 Welcome to **[DeBeatzGH](https://debeatzgh.wordpress.com/)** — your go-to hub for **AI tools, side hustle strategies, blogging resources, and digital growth guides**.  
 
-Our platform is built to help **students, creators, startups, and professionals** unlock the power of AI, monetize their skills, and thrive in today’s digital economy.  
+This platform is built to help **students, creators, startups, and professionals** unlock the power of AI, monetize their skills, and thrive in today’s digital economy.  
 
 ### ✨ What You’ll Find  
 - 💡 Explore **AI prompts, tools, and hacks**  
@@ -48,7 +291,7 @@ Our platform is built to help **students, creators, startups, and professionals*
 
 ---
 
-<!-- README: DebeatzGH Digital Store (HTML-friendly for GitHub) -->
+<!-- README: DebeatzGH  (HTML-friendly for GitHub) -->
 <div align="center">
   <a href="https://www.socialcreator.com/debeatzgh" target="_blank" rel="noopener">
     <img
@@ -58,7 +301,7 @@ Our platform is built to help **students, creators, startups, and professionals*
     />
   </a>
 
-  <h1 style="margin-top: 14px;">DebeatzGH Digital Store</h1>
+  <h1 style="margin-top: 14px;">DebeatzGH </h1>
   <p style="max-width:780px;">
     Your hub for AI insights, tech tutorials, side-hustle playbooks, and productivity tools.
     Learn, build, and launch digital projects faster.
@@ -140,7 +383,7 @@ python app.py</code></pre>
   <p>
     <a href="https://www.socialcreator.com/debeatzgh" target="_blank" rel="noopener"
        style="display:inline-block; padding:10px 16px; margin-top:6px; border-radius:10px; text-decoration:none; font-weight:600; border:1px solid #2563eb;">
-      Open DebeatzGH Now →
+      Open  Now →
     </a>
   </p>
 </div>

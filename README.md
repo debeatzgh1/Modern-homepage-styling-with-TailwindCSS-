@@ -171,7 +171,7 @@
 
   <svg width="32" height="32" fill="none" viewbox="0 0 24 24"><rect width="24" height="24" rx="12" fill="#24292e"/><path d="M8 12h8M12 8v8" stroke="#fff" stroke-width="2" stroke-linecap="round"/></path></rect></svg>
 
-</button>
+
 
 <!-- Modal Overlay and Content -->
 

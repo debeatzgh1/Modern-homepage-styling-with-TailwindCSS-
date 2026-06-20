@@ -170,8 +170,6 @@
             document.body.style.overflow = 'auto'; // Restore scroll
         }
     </script>
-</body>
-</html>
 
 
 

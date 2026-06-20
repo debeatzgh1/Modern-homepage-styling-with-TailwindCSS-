@@ -381,8 +381,7 @@
             border-top: 1px solid rgba(255, 255, 255, 0.03);
         }
     </style>
-</head>
-<body>
+
 
     <div class="page-container">
         <!-- Site Header Navigation Context -->
@@ -669,7 +668,7 @@
 
                 function fetchLazyFaqData(question) {
                     const dictionary = {
-                        "What is the DeBeatzGH workspace hub?": "The DeBeatzGH workspace hub is a unified dashboard designed to catalog tools, widgets, entertainment pipelines, and custom API interfaces for creators, developers, and platform managers.",
+                        "What is the workspace hub?": "The DeBeatzGH workspace hub is a unified dashboard designed to catalog tools, widgets, entertainment pipelines, and custom API interfaces for creators, developers, and platform managers.",
                         "How do I submit forms via GitHub pages safely?": "Our system integrates lightweight sandboxed oembed environments. Your form fields render lazily inside designated sandboxes, bypassing raw infrastructure processing for maximum data compliance.",
                         "Where can I find the official music countdown charts?": "All digital entertainment updates are broadcast live inside the Ehub portal stream. Simply deploy the layout toggle widget or launch our system carousel overlays to view updated ranks.",
                         "Can I integrate the floating Ehub widget into my 
